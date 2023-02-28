@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đọc Truyện Online</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="picture.css">
+</head>
+<body>
+    <div>
+        <div class="page-header">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                        </button>
+                        <a class="navbar-brand" href="#">Đọc Truyện Online</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Trang chủ</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Thể loại<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="action.html">Action</a></li>
+                                    <li><a href="adventure.html">Adventure</a></li>
+                                    <li><a href="Anime.html">Anime</a></li>
+                                    <li><a href="Detective.html">Detective</a></li>
+                                    <li><a href="Isekai.html">Isekai</a></li>
+                                    <li><a href="Manghua.html">Manhua</a></li>
+                                    <li><a href="Mangwa.html">Mangwa</a></li>
+                                    <li><a href="Oneshot.html">One shot</a></li>
+                                    <li><a href="Shounen.html">Shounen</a></li>
+                                    <li><a href="Webtoon.html">Webtoon</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="#">Diễn đàn</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <form class="navbar-form navbar-left" action="">
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="search" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                            </form>
+                              <li><button type="button" class="btn btn-default btn-lg" id="signup" data-toggle="modal" data-target="#signup-form"><span class="glyphicon glyphicon-user"></span> Đăng ký</button></li>
+                              <li><button type="button" class="btn btn-default btn-lg" id="login" data-toggle="modal" data-target="#login-form"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <div class="modal fade" id="login-form" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times; </button>
+                        <h3 class="modal-title">Đăng nhập</h3>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Nhập Email" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Mật khẩu:</label>
+                                    <input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu" name="pwd">
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="remember"> Nhớ mật khẩu</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                            <h6>Chưa có tài khoản? <a href="#">Đăng kí</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="modal fade" id="signup-form" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times; </button>
+                        <h3 class="modal-title">Đăng ký</h3>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="form-group">
+                                  <label for="email" style="text-align: left;">Email:</label>
+                                  <input type="email" class="form-control" id="email" placeholder="Nhập Email" name="email">
+                                </div>
+                                <div class="form-group">
+                                  <label for="login-name">Tên đăng nhập </label>
+                                  <input type="text" class="form-control" id="login-name" placeholder="Nhập tên đăng nhập" name="login-name">
+                                </div>
+                                <div class="form-group">
+                                  <label for="pwd">Mật khẩu:</label>
+                                  <input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu" name="pwd">
+                                </div>
+                                <div class="checkbox">
+                                  <label><input type="checkbox" name="remember"> Tôi đồng ký với Điều khoản sử dụng</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" id="sbm-signup">Đăng ký</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                            <h6>Đã có tài khoản? <a href="#">Đăng nhập</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="center">
+                <div class="descr">
+                    <img src="images/TBATE/bia.jpg">
+                    <h3>The Beginning After the End</h3>
+                    <p>Tác giả: <span>Đang cập nhật</span></p>
+                    <p>Thể loại: <span>Webtoon, Isekai</span></p>
+                    <p>Tóm tắt: 
+                        <br>King Grey là người sở hữu tất cả trong một thế giới bị Võ thuật chi phối. Nhưng đi đôi với một sức mạnh to lớn lại là sự cô độc không hồi kết. Thế nên, mặc dù vẻ bên ngoài là một quốc vương mạnh mẽ, nhưng sâu trong thâm tâm lại là một kẻ yếu đuối không có ý chí. Nhưng sau đó lại được tái sinh trong một thế giới fantasy để làm lại một cuộc đời mới. Tuy nhuyên đâu dễ ăn đến thế ? Đằng sau sự hòa bình của thế giới này có vẻ tồn tại một mối đe dọa khủng khiếp nào đó. Với trọng trách lớn lao đó, lý do anh main nhà ta chuyển sinh đến đây là gì?
+                    </p>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Danh sách chương</div>
+                    <div class="panel-body">Chưa đăng chương truyện nào!</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h5>
+                <p>Nguyễn Lê Bảo Ngân - 2051012068</p>
+                <p>Phạm Khải Nghiêm - 2051012070</p>
+            </h5>
+        </div>
+    </div>
+</body>
+</html>   

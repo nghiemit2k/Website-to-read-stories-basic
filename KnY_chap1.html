@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đọc Truyện Online</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="index.css">
+    <script src="truyen.js"></script>
+</head>
+<body>
+    <div>
+        <div class="page-header">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                        </button>
+                        <a class="navbar-brand" href="#">Đọc Truyện Online</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Trang chủ</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Thể loại<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="action.html">Action</a></li>
+                                    <li><a href="adventure.html">Adventure</a></li>
+                                    <li><a href="Anime.html">Anime</a></li>
+                                    <li><a href="Detective.html">Detective</a></li>
+                                    <li><a href="Isekai.html">Isekai</a></li>
+                                    <li><a href="Manghua.html">Manhua</a></li>
+                                    <li><a href="Mangwa.html">Mangwa</a></li>
+                                    <li><a href="Oneshot.html">One shot</a></li>
+                                    <li><a href="Shounen.html">Shounen</a></li>
+                                    <li><a href="Webtoon.html">Webtoon</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="#">Diễn đàn</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <form class="navbar-form navbar-left" action="">
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="search" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                            </form>
+                              <li><button type="button" class="btn btn-default btn-lg" id="signup" data-toggle="modal" data-target="#signup-form"><span class="glyphicon glyphicon-user"></span> Đăng ký</button></li>
+                              <li><button type="button" class="btn btn-default btn-lg" id="login" data-toggle="modal" data-target="#login-form"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <div class="modal fade" id="login-form" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times; </button>
+                        <h3 class="modal-title">Đăng nhập</h3>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Nhập Email" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Mật khẩu:</label>
+                                    <input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu" name="pwd">
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="remember"> Nhớ mật khẩu</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                            <h6>Chưa có tài khoản? <a href="#">Đăng kí</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="modal fade" id="signup-form" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times; </button>
+                        <h3 class="modal-title">Đăng ký</h3>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="form-group">
+                                  <label for="email" style="text-align: left;">Email:</label>
+                                  <input type="email" class="form-control" id="email" placeholder="Nhập Email" name="email">
+                                </div>
+                                <div class="form-group">
+                                  <label for="login-name">Tên đăng nhập </label>
+                                  <input type="text" class="form-control" id="login-name" placeholder="Nhập tên đăng nhập" name="login-name">
+                                </div>
+                                <div class="form-group">
+                                  <label for="pwd">Mật khẩu:</label>
+                                  <input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu" name="pwd">
+                                </div>
+                                <div class="checkbox">
+                                  <label><input type="checkbox" name="remember"> Tôi đồng ký với Điều khoản sử dụng</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" id="sbm-signup">Đăng ký</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                            <h6>Đã có tài khoản? <a href="#">Đăng nhập</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="picture">
+                <div>
+                    <h3>Jujutsu Kaishen</h3>
+                    <h4>Chương 1</h4>
+                </div>
+                <img src="images/KnY/chapter1/001.jpg">
+                <img src="images/KnY/chapter1/002.jpg">
+                <img src="images/KnY/chapter1/003.jpg">
+                <img src="images/KnY/chapter1/004.jpg">
+                <img src="images/KnY/chapter1/005.jpg">
+                <img src="images/KnY/chapter1/006.jpg">
+                <img src="images/KnY/chapter1/007.jpg">
+                <img src="images/KnY/chapter1/008.jpg">
+                <img src="images/KnY/chapter1/009.jpg">
+                <img src="images/KnY/chapter1/010.jpg">
+                <img src="images/KnY/chapter1/011.jpg">
+                <img src="images/KnY/chapter1/012.jpg">
+                <img src="images/KnY/chapter1/013.jpg">
+                <img src="images/KnY/chapter1/014.jpg">
+                <img src="images/KnY/chapter1/015.jpg">
+                <img src="images/KnY/chapter1/016.jpg">
+                <img src="images/KnY/chapter1/017.jpg">
+                <img src="images/KnY/chapter1/018.jpg">
+                <img src="images/KnY/chapter1/019.jpg">
+                <img src="images/KnY/chapter1/020.jpg">
+                <img src="images/KnY/chapter1/021.jpg">
+                <img src="images/KnY/chapter1/022.jpg">
+                <img src="images/KnY/chapter1/023.jpg">
+                <img src="images/KnY/chapter1/024.jpg">
+                <img src="images/KnY/chapter1/025.jpg">
+                <img src="images/KnY/chapter1/026.jpg">
+                <img src="images/KnY/chapter1/027.jpg">
+                <img src="images/KnY/chapter1/028.jpg">
+                <img src="images/KnY/chapter1/029.jpg">
+                <img src="images/KnY/chapter1/030.jpg">
+                <img src="images/KnY/chapter1/031.jpg">
+                <img src="images/KnY/chapter1/032.jpg">
+                <img src="images/KnY/chapter1/033.jpg">
+                <img src="images/KnY/chapter1/034.jpg">
+                <img src="images/KnY/chapter1/035.jpg">
+                <img src="images/KnY/chapter1/036.jpg">
+                <img src="images/KnY/chapter1/037.jpg">
+                <img src="images/KnY/chapter1/038.jpg">
+                <img src="images/KnY/chapter1/039.jpg">
+                <img src="images/KnY/chapter1/040.jpg">
+                <img src="images/KnY/chapter1/041.jpg">
+                <img src="images/KnY/chapter1/042.jpg">
+                <img src="images/KnY/chapter1/043.jpg">
+                <img src="images/KnY/chapter1/044.jpg">
+                <img src="images/KnY/chapter1/045.jpg">
+                <img src="images/KnY/chapter1/046.jpg">
+                <img src="images/KnY/chapter1/047.jpg">
+                <img src="images/KnY/chapter1/047.jpg">
+                <img src="images/KnY/chapter1/049.jpg">
+                <img src="images/KnY/chapter1/050.jpg">
+                <img src="images/KnY/chapter1/051.jpg">
+                <img src="images/KnY/chapter1/052.jpg">
+                <img src="images/KnY/chapter1/053.jpg">
+                <img src="images/KnY/chapter1/054.jpg">
+            </div>
+        </div>
+        <div class="process">
+            <div class="process">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav">
+                            <li><button type="button" class="btn btn-default"><a href="index.html"><span class="glyphicon glyphicon-home"></span></a></button></li>
+                            <li><button type="button" class="btn btn-default disabled"><a href="#"><span class="glyphicon glyphicon-circle-arrow-left"></span></a></button></li>
+                            <li>
+                                <div class="form-group">
+                                    <select class="form-control" id="sel1">
+                                        <option><a href="KnY_chap1.html">Chương 1</a></option>
+                                    </select>
+                                  </div>
+                            </li>
+                            <li><button type="button" class="btn btn-default disabled"><a href="#"><span class="glyphicon glyphicon-circle-arrow-right"></span></a></button></li>
+                        </ul>
+                    </div>
+                </nav>    
+            </div>
+        </div>
+        <div class="footer">
+            <h5>
+                <p>Nguyễn Lê Bảo Ngân - 2051012068</p>
+                <p>Phạm Khải Nghiêm - 2051012070</p>
+            </h5>
+        </div>
+    </div>
+    
+</body>
+</html>   
